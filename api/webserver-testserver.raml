@@ -1,0 +1,43 @@
+#%RAML 1.0
+---
+title: OATS API
+baseUri: https://api.oats.org/{version}
+version: v1
+/users:
+	description: "User"
+	/{username}
+	/course
+		description: "Courses the user is enrolled in"
+		post:
+			description: "Add a new Course"
+		put:
+			description: "Update the Course"
+		delete: 
+			description: "Remove Course"
+		/{coursename}
+		/assignment:
+			description: "Assignments for the course"
+			post:
+				description: "Add new Assignment"
+			put:
+				description: "Update Assignment"
+			delete:
+				description: "Remove Assignment"
+			/{assignmentname}
+			/testcase:
+				description: "Test cases submitted for an assignment"
+				post:
+					description: "Add Test Case"
+				delete:
+					description: "Remvoe Test Case"
+				/{testcasename}
+			/submission:
+				description: "User Submissions"
+				post:
+					description: "Add Submission"
+			/submission_results:
+				description: "Results of the user submission"
+				get:
+					description: "Retrieve Results"
+	/role:
+		description: "Change roles of a specified user"
