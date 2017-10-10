@@ -10,34 +10,67 @@ version: v1
 		description: "Courses the user is enrolled in"
 		post:
 			description: "Add a new Course"
+			responses:
+                200:
+                401:
 		put:
 			description: "Update the Course"
+			responses:
+                200:
+                401:
 		delete: 
 			description: "Remove Course"
+			responses:
+                200:
+                401:
 		/{coursename}
 		/assignment:
 			description: "Assignments for the course"
 			post:
 				description: "Add new Assignment"
+				responses:
+                    200:
+                    401:
 			put:
 				description: "Update Assignment"
+				responses:
+                    200:
+                    401:
 			delete:
 				description: "Remove Assignment"
+				responses:
+                    200:
+                    401:
 			/{assignmentname}
 			/testcase:
 				description: "Test cases submitted for an assignment"
 				post:
 					description: "Add Test Case"
+					responses:
+                        200:
+                        401:
 				delete:
-					description: "Remvoe Test Case"
+					description: "Remove Test Case"
+					responses:
+                        200:
+                        401:
 				/{testcasename}
 			/submission:
 				description: "User Submissions"
 				post:
 					description: "Add Submission"
+					responses:
+                        200:
+                        401:
 			/submission_results:
 				description: "Results of the user submission"
 				get:
 					description: "Retrieve Results"
+					responses:
+                        200:
+                        401:
 	/role:
 		description: "Change roles of a specified user"
+        responses:
+            200:
+            401:
