@@ -1,0 +1,55 @@
+User info
+	UID
+	user name
+	role <verified with auth-token>
+
+POST: Prof TA
+create-assignment:
+	sample code
+	test cases
+	prof account info
+	course info
+	auth token
+	assignment
+RESPONSE: HTTP CODE
+
+POST: All
+upload-test:
+	test cases
+	user info
+	course info
+	assignment
+	prof
+	token
+RESPONSE: HTTP CODE
+
+PUT: Prof TA
+update-assignment:
+	${create-assignment reqs}
+RESPONSE: HTTP CODE
+
+GET: All
+run-test:
+	user code
+	test case list
+	course
+	assignment
+	prof
+	user info
+	token
+RESPONSE:
+	{
+		success: [0,2,4],
+		fail: [1,3]
+	}
+
+DELETE: All
+delete-test:
+	tid
+	${upload-test reqs except for test case}
+RESPONSE: HTTP CODE
+
+test with curl -i API or python request lib
+
+Meetings are first Tues of every sprint:
+	1 - 1:45
