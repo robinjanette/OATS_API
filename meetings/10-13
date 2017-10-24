@@ -49,7 +49,27 @@ delete-test:
 	${upload-test reqs except for test case}
 RESPONSE: HTTP CODE
 
+POST:
+create-course:
+	prof info (just user info for the prof)
+	cid
+	course name
+	auth token
+	semester
+
+	profname+coursename+semester  (abukamail+4560+spr17)
+	
+PUT:
+update-course:
+
+DELETE:
+delete-course:
+
 test with curl -i API or python request lib
 
 Meetings are first Tues of every sprint:
 	1 - 1:45
+
+Ask Stewart:
+	auth tokens on test server or secondary check?
+	do courses get deleted at end of every semester?
