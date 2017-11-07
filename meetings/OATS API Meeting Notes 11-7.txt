@@ -1,0 +1,37 @@
+Meeting Log OATS 11/7
+
+Members attending: Tim and Robin (TBD) and Austin and Jacob (ITF)
+
+The teams discussed API implementation and JSON Web Tokens. 
+
+API Implementation in pseudocode:
+
+	app.post('/api/run', lambda(request, response){
+		var some-id = req.body['id'];
+		//do work
+		var res_json = {};
+		if (error) { return res.status(500).send("error"); }
+		else { return res.send(res_json);
+	});
+
+Sites visited:
+https://stormpath.com/blog/jwt-the-right-way
+https://connect2id.com/products/nimbus-jose-jwt/algorithm-selection-guide
+https://jwt.io/
+
+JWT format: header.payload.verify
+header: algorithm + jwt
+payload: JSON data
+verify: base64(header) + "." + base64(payload), key
+
+Technology stack:
+	W			T
+form -> req(jwt(JSON)) -> python script
+			  decode jwt
+			  //do work
+	<- (no jwt)		  res
+
+Implementation Details:
+	Use the same algorithm: RS512
+	Use the same key: need to generate a string with entropy
+	Use exp check
