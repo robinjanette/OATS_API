@@ -4,4 +4,15 @@ Example parameters for /api/run_test
   course: 'test101',
   assignment: 'testhw',
   prof: 'crabtree',
-  user: { uid: 'test_code', name: 'austin', role: 'student' }
+ 
+  //remove token parameter, we can just use the jwt string for the user param from the payload form:
+  //{ uid: 'test_code', name: 'austin', role: 'student' }
+  user: 'jwt.str.asldfkjh'
+  
+Example for /api/test
+    test_file: file, //base64 encoded test file contents
+    test_id: "testID",
+    course: "aklasdfh",
+    assignment: "asdlkjfb",
+    prof: "asldkfjh",
+    user: 'jwt.str.asdflj'
