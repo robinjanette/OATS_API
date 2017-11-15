@@ -1,0 +1,7 @@
+Example parameters for /api/run_test
+  code: data, //zipped text of possibly multiple source files with Deflate compression, base64 encoded
+  test_cases: ["asf", "sdfg"], //IDs of tests to run
+  course: 'test101',
+  assignment: 'testhw',
+  prof: 'crabtree',
+  user: { uid: 'test_code', name: 'austin', role: 'student' }
