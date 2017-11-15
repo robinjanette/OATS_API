@@ -16,3 +16,10 @@ Example for /api/test
     assignment: "asdlkjfb",
     prof: "asldkfjh",
     user: 'jwt.str.asdflj'
+
+Example for /api/prof/assignment
+    ref_code: code, //zipped and encoded
+    course: "",
+    assignment: "",
+    prof: "",
+    user: 'jwt.str.aaljfh'
