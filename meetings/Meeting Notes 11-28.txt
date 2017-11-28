@@ -1,0 +1,12 @@
+Changing to HS256
+Expiration Time for JWT: 2 seconds
+
+Base 64 Stuff
+base64.b64<encode or decode>
+name + ".zip", "wb"
+
+zipfile.ZipFile(os.path.join(path))
+
+Add variable for code language to Assignment as a list in the JSON
+Add variable for code language to Run test as a string
+
